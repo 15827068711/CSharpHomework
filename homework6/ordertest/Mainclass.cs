@@ -20,10 +20,14 @@ namespace ordertest
             OrderList.Add(Info1);
             OrderList.Add(Info2);
             OrderList.Add(Info3);
+            List<Order> ListT = new List<Order>();
+            ordertest.OrderDetails fun = new ordertest.OrderDetails(1);
+            //ListT = fun.SearchByOrderNum(OrderList, 2018001);
+            Console.WriteLine(ListT);
 
-            OrderDetails Detail = new OrderDetails(1);
-            Detail.Import(OrderList);
-            Detail.Export(OrderList);
+            //OrderDetails Detail = new OrderDetails(1);
+            //Detail.Import(OrderList);
+            //Detail.Export(OrderList);
 
         }
     }

@@ -21,36 +21,36 @@ namespace ordertest
 
 
 
-        public List<Order> SearchByGoodsName(List<Order> OrderList)//按照订单商品名称查找相应订单
+        public List<Order> SearchByGoodsName(List<Order> OrderList,string name)//按照订单商品名称查找相应订单
         {
-            var m = from n in OrderList where n.GoodsName == "melon" select n;
+            var m = from n in OrderList where n.GoodsName == name select n;
             foreach (var n in m)
             {
                 Console.WriteLine(n);
             }
             return m as List<Order>;
         }
-        public List<Order> SearchByCustomer(List<Order> OrderList)
+        public List<Order> SearchByCustomer(List<Order> OrderList,string name)
         {
-            var m = from n in OrderList where n.Customer == "Chen" select n;
+            var m = from n in OrderList where n.Customer == name select n;
             foreach (var n in m)
             {
                 Console.WriteLine(n);
             }
             return m as List<Order>;
         }
-        public List<Order> SearchByOrderNum(List<Order> OrderList)
+        public List<Order> SearchByOrderNum(List<Order> OrderList,long Num)
         {
-            var m = from n in OrderList where n.OrderNum == 2018002 select n;
+            var m = from n in OrderList where n.OrderNum == Num select n;
             foreach (var n in m)
             {
                 Console.WriteLine(n);
             }
             return m as List<Order>;
         }
-        public List<Order> SearchByOrderamount(List<Order> OrderList)
+        public List<Order> SearchByOrderamount(List<Order> OrderList,long amount)
         {
-            var m = from n in OrderList where n.Orderamount > 500000 select n;
+            var m = from n in OrderList where n.Orderamount >amount select n;
             foreach (var n in m)
             {
                 Console.WriteLine(n);
@@ -67,7 +67,7 @@ namespace ordertest
                 xs.Serialize(fs, OrderList);
             }
         }
-        public void Import(List<Order> OrderList)
+       /* public void Import(List<Order> OrderList)
         {
             using (FileStream fs = new FileStream("Order.xml", FileMode.Open))
             {
@@ -75,7 +75,7 @@ namespace ordertest
                 List<Order> OrderList2 = (List<Order>)xs.Deserialize(fs);
                 OrderList2.ForEach(ORDER => Console.WriteLine(ORDER.ToString()));
             }
-        }
+        }*/
 
 
     }

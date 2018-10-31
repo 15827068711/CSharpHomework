@@ -24,7 +24,7 @@ namespace ordertest.Tests
             OrderList.Add(sample);
             OrderDetails p = new OrderDetails(1);
             List<Order> OrderList1 = new List<Order>();
-            OrderList1 = p.SearchByGoodsName(OrderList);
+            OrderList1 = p.SearchByGoodsName(OrderList,"lemon");
             CollectionAssert.AreEqual(OrderList1, OrderList);
         }
 
@@ -36,7 +36,7 @@ namespace ordertest.Tests
             OrderList.Add(sample);
             OrderDetails p = new OrderDetails(1);
             List<Order> OrderList1 = new List<Order>();
-            OrderList1 = p.SearchByCustomer(OrderList);
+            OrderList1 = p.SearchByCustomer(OrderList,"Shen");
             CollectionAssert.AreEqual(OrderList1, OrderList);
         }
 
@@ -48,7 +48,7 @@ namespace ordertest.Tests
             OrderList.Add(sample);
             OrderDetails p = new OrderDetails(1);
             List<Order> OrderList1 = new List<Order>();
-            OrderList1 = p.SearchByOrderNum(OrderList);
+            OrderList1 = p.SearchByOrderNum(OrderList,2018001);
             CollectionAssert.AreEqual(OrderList1, OrderList);
         }
 
@@ -60,7 +60,7 @@ namespace ordertest.Tests
             OrderList.Add(sample);
             OrderDetails p = new OrderDetails(1);
             List<Order> OrderList1 = new List<Order>();
-            OrderList1 = p.SearchByOrderamount(OrderList);
+            OrderList1 = p.SearchByOrderamount(OrderList,50000);
             CollectionAssert.AreEqual(OrderList1, OrderList);
         }
     }
