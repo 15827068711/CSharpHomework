@@ -21,6 +21,13 @@ namespace ordertest
             customer = Customer;
             orderamount = Orderamount;
         }
+        public Order(Order temp)
+        {
+            orderNum = temp.orderNum;
+            orderamount = temp.orderamount;
+            goodsname = temp.goodsname;
+            customer = temp.customer;
+        }
 
         public long OrderNum//为类外部获得订单号提供一个接口
         {

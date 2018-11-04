@@ -28,7 +28,7 @@ namespace ordertest
             {
                 Console.WriteLine(n);
             }
-            return m as List<Order>;
+            return m.ToList();
         }
         public List<Order> SearchByCustomer(List<Order> OrderList,string name)
         {
@@ -37,7 +37,7 @@ namespace ordertest
             {
                 Console.WriteLine(n);
             }
-            return m as List<Order>;
+            return m.ToList();
         }
         public List<Order> SearchByOrderNum(List<Order> OrderList,long Num)
         {
@@ -46,7 +46,7 @@ namespace ordertest
             {
                 Console.WriteLine(n);
             }
-            return m as List<Order>;
+            return m.ToList();
         }
         public List<Order> SearchByOrderamount(List<Order> OrderList,long amount)
         {
@@ -55,7 +55,7 @@ namespace ordertest
             {
                 Console.WriteLine(n);
             }
-            return m as List<Order>;
+            return m.ToList();
         }
 
         public void Export(List<Order> OrderList)
