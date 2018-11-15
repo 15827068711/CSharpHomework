@@ -11,15 +11,15 @@ namespace ordertest.Tests
     [TestClass()]
     public class OrderDetailsTests
     {
-        Order Info1 = new Order(2018001, "apple", "Wang", 101011);
-        Order Info2 = new Order(2018002, "melon", "Chen", 205025);
-        Order Info3 = new Order(2018003, "groups", "Shen", 563442);
+        Order Info1 = new Order(2018001, "apple", "Wang", 101011,15844445555);
+        Order Info2 = new Order(2018002, "melon", "Chen", 205025,15844445555);
+        Order Info3 = new Order(2018003, "groups", "Shen", 563442, 15844445555);
         List<Order> OrderList = new List<Order>();
 
         [TestMethod()]
         public void SearchByGoodsNameTest()
         {
-            Order sample = new Order(2018002, "melon", "Chen", 205025);
+            Order sample = new Order(2018002, "melon", "Chen", 205025, 15844445555);
             List<Order> OrderList = new List<Order>();
             OrderList.Add(sample);
             OrderDetails p = new OrderDetails(1);
@@ -31,7 +31,7 @@ namespace ordertest.Tests
         [TestMethod()]
         public void SearchByCustomerTest()
         {
-            Order sample = new Order(2018002, "melon", "Chen", 205025);
+            Order sample = new Order(2018002, "melon", "Chen", 205025, 15844445555);
             List<Order> OrderList = new List<Order>();
             OrderList.Add(sample);
             OrderDetails p = new OrderDetails(1);
@@ -43,7 +43,7 @@ namespace ordertest.Tests
         [TestMethod()]
         public void SearchByOrderNumTest()
         {
-            Order sample = new Order(2018002, "melon", "Chen", 205025);
+            Order sample = new Order(2018002, "melon", "Chen", 205025, 15844445555);
             List<Order> OrderList = new List<Order>();
             OrderList.Add(sample);
             OrderDetails p = new OrderDetails(1);
@@ -55,7 +55,7 @@ namespace ordertest.Tests
         [TestMethod()]
         public void SearchByOrderamountTest()
         {
-            Order sample = new Order(2018003, "groups", "Shen", 563442);
+            Order sample = new Order(2018003, "groups", "Shen", 563442, 15844445555);
             List<Order> OrderList = new List<Order>();
             OrderList.Add(sample);
             OrderDetails p = new OrderDetails(1);

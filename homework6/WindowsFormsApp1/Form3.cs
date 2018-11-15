@@ -27,9 +27,9 @@ namespace WindowsFormsApp1
         {
             string temp1 = textBox1.Text;
             long temp2 = long.Parse(temp1);
-            ordertest.Order Info1 = new ordertest.Order(2018001, "apple", "Wang", 101011);
-            ordertest.Order Info2 = new ordertest.Order(2018002, "melon", "Chen", 205025);
-            ordertest.Order Info3 = new ordertest.Order(2018003, "groups", "Shen", 563442);
+            Order Info1 = new Order(2018001, "apple", "Wang", 101011, 13811112222);
+            Order Info2 = new Order(2018002, "melon", "Chen", 205025, 15877775555);
+            Order Info3 = new Order(2018003, "groups", "Shen", 563442, 15963214444);
             orderList1.Add(Info1);
             orderList1.Add(Info2);
             orderList1.Add(Info3);
@@ -44,9 +44,9 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ordertest.Order Info1 = new ordertest.Order(2018001, "apple", "Wang", 101011);
-            ordertest.Order Info2 = new ordertest.Order(2018002, "melon", "Chen", 205025);
-            ordertest.Order Info3 = new ordertest.Order(2018003, "groups", "Shen", 563442);
+            Order Info1 = new Order(2018001, "apple", "Wang", 101011, 13811112222);
+            Order Info2 = new Order(2018002, "melon", "Chen", 205025, 15877775555);
+            Order Info3 = new Order(2018003, "groups", "Shen", 563442, 15963214444);
             orderList2.Add(Info1);
             orderList2.Add(Info2);
             orderList2.Add(Info3);
@@ -61,9 +61,9 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ordertest.Order Info1 = new ordertest.Order(2018001, "apple", "Wang", 101011);
-            ordertest.Order Info2 = new ordertest.Order(2018002, "melon", "Chen", 205025);
-            ordertest.Order Info3 = new ordertest.Order(2018003, "groups", "Shen", 563442);
+            Order Info1 = new Order(2018001, "apple", "Wang", 101011, 13811112222);
+            Order Info2 = new Order(2018002, "melon", "Chen", 205025, 15877775555);
+            Order Info3 = new Order(2018003, "groups", "Shen", 563442, 15963214444);
             orderList3.Add(Info1);
             orderList3.Add(Info2);
             orderList3.Add(Info3);
@@ -80,9 +80,9 @@ namespace WindowsFormsApp1
         {
             string temp1 = textBox1.Text;
             long temp2 = long.Parse(temp1);
-            ordertest.Order Info1 = new ordertest.Order(2018001, "apple", "Wang", 101011);
-            ordertest.Order Info2 = new ordertest.Order(2018002, "melon", "Chen", 205025);
-            ordertest.Order Info3 = new ordertest.Order(2018003, "groups", "Shen", 563442);
+            Order Info1 = new Order(2018001, "apple", "Wang", 101011, 13811112222);
+            Order Info2 = new Order(2018002, "melon", "Chen", 205025, 15877775555);
+            Order Info3 = new Order(2018003, "groups", "Shen", 563442, 15963214444);
             orderList4.Add(Info1);
             orderList4.Add(Info2);
             orderList4.Add(Info3);
@@ -93,6 +93,11 @@ namespace WindowsFormsApp1
                 orderList4.Remove(n);
             }
             dataGridView4.DataSource = orderList4;
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     

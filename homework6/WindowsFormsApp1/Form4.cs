@@ -18,10 +18,10 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
         public List<ordertest.Order> orderList = new List<ordertest.Order>();
-        ordertest.Order Info1 = new ordertest.Order(2018001, "apple", "Wang", 101011);
-        ordertest.Order Info2 = new ordertest.Order(2018002, "melon", "Chen", 205025);
-        ordertest.Order Info3 = new ordertest.Order(2018003, "groups", "Shen", 563442);
-        
+        Order Info1 = new Order(2018001, "apple", "Wang", 101011, 13811112222);
+        Order Info2 = new Order(2018002, "melon", "Chen", 205025, 15877775555);
+        Order Info3 = new Order(2018003, "groups", "Shen", 563442, 15963214444);
+
         private void button1_Click(object sender, EventArgs e)
         {
             

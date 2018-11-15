@@ -18,24 +18,24 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        public List<ordertest.Order> orderList1 = new List<ordertest.Order>();
-        public List<ordertest.Order> orderList2 = new List<ordertest.Order>();
-        public List<ordertest.Order> orderList3 = new List<ordertest.Order>();
-        public List<ordertest.Order> orderList4 = new List<ordertest.Order>();
-        public List<ordertest.Order> ListTemp = new List<ordertest.Order>();
+        public List<Order> orderList1 = new List<Order>();
+        public List<Order> orderList2 = new List<Order>();
+        public List<Order> orderList3 = new List<Order>();
+        public List<Order> orderList4 = new List<Order>();
+        public List<Order> ListTemp = new List<Order>();
 
 
         private void button1_Click(object sender, EventArgs e)
         {
             string temp1 = textBox1.Text;
             long temp2 = long.Parse(temp1);
-            ordertest.Order Info1 = new ordertest.Order(2018001, "apple", "Wang", 101011);
-            ordertest.Order Info2 = new ordertest.Order(2018002, "melon", "Chen", 205025);
-            ordertest.Order Info3 = new ordertest.Order(2018003, "groups", "Shen", 563442);
+            Order Info1 = new Order(2018001, "apple", "Wang", 101011, 13811112222);
+            Order Info2 = new Order(2018002, "melon", "Chen", 205025, 15877775555);
+            Order Info3 = new Order(2018003, "groups", "Shen", 563442, 15963214444);
             orderList1.Add(Info1);
             orderList1.Add(Info2);
             orderList1.Add(Info3);
-            ordertest.OrderDetails fun1 = new ordertest.OrderDetails(1);
+            OrderDetails fun1 = new OrderDetails(1);
             ListTemp = fun1.SearchByOrderNum(orderList1, temp2);          
             orderBindingSource.DataSource = ListTemp;
         }
@@ -53,13 +53,13 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ordertest.Order Info1 = new ordertest.Order(2018001, "apple", "Wang", 101011);
-            ordertest.Order Info2 = new ordertest.Order(2018002, "melon", "Chen", 205025);
-            ordertest.Order Info3 = new ordertest.Order(2018003, "groups", "Shen", 563442);
+            Order Info1 = new Order(2018001, "apple", "Wang", 101011, 13811112222);
+            Order Info2 = new Order(2018002, "melon", "Chen", 205025, 15877775555);
+            Order Info3 = new Order(2018003, "groups", "Shen", 563442, 15963214444);
             orderList2.Add(Info1);
             orderList2.Add(Info2);
             orderList2.Add(Info3);
-            ordertest.OrderDetails fun2 = new ordertest.OrderDetails(1);
+            OrderDetails fun2 = new OrderDetails(1);
             orderList2 = fun2.SearchByGoodsName(orderList2, textBox2.Text);
             dataGridView2.DataSource = null;//初始化控件数据
             dataGridView2.DataSource = orderList2;
@@ -68,13 +68,13 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ordertest.Order Info1 = new ordertest.Order(2018001, "apple", "Wang", 101011);
-            ordertest.Order Info2 = new ordertest.Order(2018002, "melon", "Chen", 205025);
-            ordertest.Order Info3 = new ordertest.Order(2018003, "groups", "Shen", 563442);
+            Order Info1 = new Order(2018001, "apple", "Wang", 101011,13811112222);
+            Order Info2 = new Order(2018002, "melon", "Chen", 205025, 15877775555);
+            Order Info3 = new Order(2018003, "groups", "Shen", 563442, 15963214444);
             orderList3.Add(Info1);
             orderList3.Add(Info2);
             orderList3.Add(Info3);
-            ordertest.OrderDetails fun3 = new ordertest.OrderDetails(1);
+            OrderDetails fun3 = new OrderDetails(1);
             orderList3 = fun3.SearchByCustomer(orderList3, textBox3.Text);
             this.dataGridView3.DataSource = null;//初始化控件数据
             this.dataGridView3.DataSource = this.orderList3;
@@ -84,13 +84,13 @@ namespace WindowsFormsApp1
         {
             string temp1 = textBox4.Text;
             long temp2 = long.Parse(temp1);
-            ordertest.Order Info1 = new ordertest.Order(2018001, "apple", "Wang", 101011);
-            ordertest.Order Info2 = new ordertest.Order(2018002, "melon", "Chen", 205025);
-            ordertest.Order Info3 = new ordertest.Order(2018003, "groups", "Shen", 563442);
+            Order Info1 = new Order(2018001, "apple", "Wang", 101011, 13811112222);
+            Order Info2 = new Order(2018002, "melon", "Chen", 205025, 15877775555);
+            Order Info3 = new Order(2018003, "groups", "Shen", 563442, 15963214444);
             orderList4.Add(Info1);
             orderList4.Add(Info2);
             orderList4.Add(Info3);
-            ordertest.OrderDetails fun4 = new ordertest.OrderDetails(1);
+            OrderDetails fun4 = new OrderDetails(1);
             orderList4 = fun4.SearchByOrderamount(orderList4, temp2);
             this.dataGridView4.DataSource = null;//初始化控件数据
             this.dataGridView4.DataSource = this.orderList4;
@@ -100,13 +100,13 @@ namespace WindowsFormsApp1
         {
             string temp1 = textBox1.Text;
             long temp2 = long.Parse(temp1);
-            ordertest.Order Info1 = new ordertest.Order(2018001, "apple", "Wang", 101011);
-            ordertest.Order Info2 = new ordertest.Order(2018002, "melon", "Chen", 205025);
-            ordertest.Order Info3 = new ordertest.Order(2018003, "groups", "Shen", 563442);
+            Order Info1 = new Order(2018001, "apple", "Wang", 101011, 13811112222);
+            Order Info2 = new Order(2018002, "melon", "Chen", 205025, 15877775555);
+            Order Info3 = new Order(2018003, "groups", "Shen", 563442, 15963214444);
             orderList1.Add(Info1);
             orderList1.Add(Info2);
             orderList1.Add(Info3);
-            ordertest.OrderDetails fun1 = new ordertest.OrderDetails(1);
+            OrderDetails fun1 = new OrderDetails(1);
             ListTemp = fun1.SearchByOrderNum(orderList1, temp2);
             foreach (var n in ListTemp)
             {

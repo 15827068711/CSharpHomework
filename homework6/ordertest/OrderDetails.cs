@@ -57,6 +57,15 @@ namespace ordertest
             }
             return m.ToList();
         }
+        public List<Order> SearchByPhoneNum(List<Order> OrderList, long amount)
+        {
+            var m = from n in OrderList where n.PhoneNum == amount select n;
+            foreach (var n in m)
+            {
+                Console.WriteLine(n);
+            }
+            return m.ToList();
+        }
 
         public void Export(List<Order> OrderList)
         {

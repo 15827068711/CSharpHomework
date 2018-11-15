@@ -13,9 +13,9 @@ namespace ordertest
     {
         static void Main(string[] args)
         {
-            Order Info1 = new Order(2018001, "apple", "Wang", 101011);
-            Order Info2 = new Order(2018002, "melon", "Chen", 205025);
-            Order Info3 = new Order(2018003, "groups", "Shen", 563442);
+            Order Info1 = new Order(2018001, "apple", "Wang", 101011, 13811112222);
+            Order Info2 = new Order(2018002, "melon", "Chen", 205025, 15877775555);
+            Order Info3 = new Order(2018003, "groups", "Shen", 563442, 15963214444);
             List<Order> OrderList = new List<Order>();
             OrderList.Add(Info1);
             OrderList.Add(Info2);

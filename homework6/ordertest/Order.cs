@@ -13,13 +13,15 @@ namespace ordertest
         private string goodsname;//订单商品种类
         private string customer;//订单客户的姓名
         private long orderamount;
+        private long phoneNum;
         public Order() { }
-        public Order(long OrderNum, string GoodsName, string Customer, long Orderamount)//order类的构造函数
+        public Order(long OrderNum, string GoodsName, string Customer, long Orderamount,long PhoneNum)//order类的构造函数
         {
             orderNum = OrderNum;
             goodsname = GoodsName;
             customer = Customer;
             orderamount = Orderamount;
+            phoneNum = PhoneNum;
         }
         public Order(Order temp)
         {
@@ -27,6 +29,7 @@ namespace ordertest
             orderamount = temp.orderamount;
             goodsname = temp.goodsname;
             customer = temp.customer;
+            phoneNum = temp.phoneNum;
         }
 
         public long OrderNum//为类外部获得订单号提供一个接口
@@ -69,6 +72,17 @@ namespace ordertest
             {
                 if (value > 0)
                     orderamount = value;
+                else
+                    throw new ArgumentOutOfRangeException("orderamout error");
+            }
+        }
+        public long PhoneNum
+        {
+            get { return phoneNum; }
+            set
+            {
+                if (value > 0)
+                    phoneNum = value;
                 else
                     throw new ArgumentOutOfRangeException("orderamout error");
             }
